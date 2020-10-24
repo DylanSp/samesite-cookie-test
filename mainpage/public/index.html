@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Main site</title>
+  </head>
+
+  <body>
+    <button onclick="submitCookieRequest()">Set Cookies</button>
+  </body>
+
+  <script>
+    function submitCookieRequest() {
+      fetch("/setCookies", {
+        method: "POST"
+      })
+      .then(response => {
+        if (response.ok) {
+          window.alert("Cookies set!");
+        } else {
+          window.alert("Someone had blunder'd");
+        }
+      });
+    }
+  </script>
+</html>
