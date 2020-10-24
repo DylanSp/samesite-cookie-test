@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>API</title>
+  </head>
+
+  <body>
+    <button onclick="checkCookies()">Check Cookies</button>
+  </body>
+
+  <script>
+    function checkCookies() {
+      fetch("/check")
+      .then(response => {
+        if (response.ok) {
+          window.alert("Cookies check out!");
+        } else {
+          window.alert("Someone had blunder'd");
+        }
+      });
+    }
+  </script>
+</html>
