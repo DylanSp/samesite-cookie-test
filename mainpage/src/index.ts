@@ -10,7 +10,8 @@ app.use(express.static(publicPath));
 app.post("/setCookies", (req, res) => {
   res.cookie("myCookie", "peanutButter", {
     httpOnly: true,
-    sameSite: "strict"
+    sameSite: "strict",
+    domain: "decisionmakeronline.com",
   });
   res.sendStatus(204);
 });
